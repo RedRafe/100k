@@ -17,4 +17,12 @@ data:extend({
         maximum_value = 100,
         order = 'b',
     },
+    {
+        type = 'string-setting',
+        name = '100k-technology-difficulty',
+        setting_type = 'startup',
+        default_value = 'normal',
+        allowed_values = { 'easy', 'normal', 'hard' },
+        order = 'c',
+    },
 })
