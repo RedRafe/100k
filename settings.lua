@@ -8,4 +8,13 @@ data:extend({
         maximum_value = 1024,
         order = 'a',
     },
+    {
+        type = 'double-setting',
+        name = '100k-point-resource-multiplier',
+        setting_type = 'startup',
+        default_value = 5,
+        minimum_value = 1,
+        maximum_value = 100,
+        order = 'b',
+    },
 })
