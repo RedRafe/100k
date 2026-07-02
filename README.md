@@ -17,11 +17,11 @@ Play Factorio at 100k! Massive ore territories and a 100k tech cost multiplier, 
 
 All settings are **startup** settings (require a new save / map regeneration to take effect).
 
-| Setting | Type | Default | Range | Description |
-|---|---|---|---|---|
-| `100k-territory-size` | int | `76` | 32 – 1024 | Average size, in tiles, of each Voronoi territory. |
-| `100k-point-resource-multiplier` | double | `5` | 1 – 100 | Multiplier applied to the probability, richness, and frequency of point-resources (crude oil, sulfuric acid geysers, fluorine vents, etc.), instead of confining them to a territory. |
-| `100k-technology-difficulty` | string | `normal` | `easy` / `normal` / `hard` | Controls how aggressively technology costs are scaled to match the 100k territory size. See below. |
+| Setting | Default | Range | Description |
+|---|---|---|---|
+| `Territory size` | `76` | 32 – 1024 | Average size, in tiles, of each Voronoi territory. |
+| `Point-resource multiplier` | `5` | 1 – 100 | Multiplier applied to the probability, richness, and frequency of point-resources (crude oil, sulfuric acid geysers, fluorine vents, etc.), instead of confining them to a territory. |
+| `Technology difficulty` | `normal` | `easy` / `normal` / `hard` | Controls how aggressively technology costs are scaled to match the 100k territory size. See below. |
 
 ### Technology difficulty
 
