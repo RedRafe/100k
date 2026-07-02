@@ -4,10 +4,22 @@ local point_resource_multiplier = settings.startup['100k-point-resource-multipli
 
 -- Point-resources (e.g. crude-oil, sulfuric-acid-geyser, fluorine-vent) are inexhaustible --
 -- a handful of instances already provide sufficient supply, unlike ores that must be mined out
--- bit by bit. Vanilla marks these with infinite = true plus infinite_depletion_amount, so use
--- that combination to tell them apart from regular ore resources.
+-- bit by bit. All of them yield a fluid rather than a solid item, so use that as the indicator
+-- instead of the infinite/infinite_depletion_amount fields (which aren't reliably set by modded
+-- resources).
 local function is_point_resource(resource)
-    return resource.infinite_depletion_amount ~= nil -- and resource.infinite == true
+    local results = resource.minable and resource.minable.results
+    if not results then
+        return false
+    end
+
+    for _, result in ipairs(results) do
+        if result.type == 'fluid' and data.raw.fluid[result.name] then
+            return true
+        end
+    end
+
+    return false
 end
 
 -- Richness is not driven by the resource's own name -- e.g. Vulcanus' "tungsten-ore" entity is

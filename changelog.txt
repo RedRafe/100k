@@ -18,8 +18,8 @@ Date: 2026-07-02
       generation actually consults, not just the resource's own autoplace field.
     - Added startup setting "100k-territory-size" controlling the average size (in tiles) of each
       Voronoi territory.
-    - Point-resources (infinite resources with an infinite_depletion_amount, e.g. crude oil) are
-      excluded from Voronoi territory assignment -- a handful of instances already provide
-      sufficient supply, unlike ores that need to be mined out gradually. They keep their own
-      default frequency/probability/richness autoplace expression, scaled up by a new startup
-      setting "100k-point-resource-multiplier" (default 5).
+    - Point-resources (resources that yield a fluid, e.g. crude oil) are excluded from Voronoi
+      territory assignment -- a handful of instances already provide sufficient supply, unlike
+      ores that need to be mined out gradually. They keep their own default
+      frequency/probability/richness autoplace expression, scaled up by a new startup setting
+      "100k-point-resource-multiplier" (default 5).
