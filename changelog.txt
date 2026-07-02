@@ -1,11 +1,20 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: 2022.12.31
-  Info:
-    - initial release
-  Changes:
-    - changed X
+Date: 2026-07-02
   Features:
-    - added feature A
-  Bugfixes:
-    - fixed issue #1
+    - Nauvis resources (iron ore, copper ore, coal, stone, uranium ore, crude oil) are now generated
+      as large Voronoi territories -- each region of the map is assigned exactly one resource type,
+      using the engine's native voronoi_cell_id noise function. Each resource's probability_expression
+      is replaced outright by its territory condition, so it fully covers its territory instead of
+      being confined to vanilla's sparse patches; richness_expression is also rebuilt instead of
+      using vanilla's curve as-is, since vanilla's richness is driven by the same patchy noise as
+      probability and evaluates near-zero outside its original patch shapes, which would otherwise
+      starve placement across most of each territory. The rebuilt expression keeps vanilla's
+      formula shape (richness control slider * base density * starting-distance falloff) but
+      swaps out the noise-driven amount for each resource's own base_density, decoupling HOW MUCH
+      ore spawns from WHERE the voronoi cell placed it. Territory/richness
+      expressions are wired into Nauvis's planet.map_gen_settings.property_expression_names, the
+      same mechanism Vulcanus uses to override tungsten-ore/coal/calcite -- this is what map
+      generation actually consults, not just the resource's own autoplace field.
+    - Added startup setting "100k-territory-size" controlling the average size (in tiles) of each
+      Voronoi territory.

@@ -1,13 +1,13 @@
 {
-  "name": "factorio-mod-template",
+  "name": "100k",
   "version": "0.1.0",
-  "title": "Factorio Mod Template",
+  "title": "Factorio 100k",
   "author": "RedRafe",
-  "source": "https://github.com/RedRafe/factorio-mod-template",
-  "homepage": "https://mods.factorio.com/mod/factorio-mod-template",
+  "source": "https://github.com/RedRafe/100k",
+  "homepage": "https://mods.factorio.com/mod/100k",
   "dependencies": [
     "base >= 2.1"
   ],
-  "description": "A ready-to-use template for Factorio mods",
+  "description": "Nauvis resources are arranged into large Voronoi ore territories, each fully covered by its assigned resource.",
   "factorio_version": "2.1"
 }
