@@ -1,6 +1,6 @@
 # 100k
 
-Nauvis resources are arranged into large Voronoi ore territories, each fully covered by its assigned resource, instead of vanilla's sparse, scattered patches.
+Play Factorio at 100k! Massive ore territories and a 100k tech cost multiplier, with configurable settings to tune the challenge to your liking.
 
 ---
 
@@ -30,3 +30,7 @@ All settings are **startup** settings (require a new save / map regeneration to 
 | **Hard** | None. | Always set to 100k. | Vanilla spawn distance. |
 | **Normal** | `logistics` and `electric-mining-drill` ignore the cost multiplier, making early game less tedious. | Forced to 100k only if not already set higher (respects a custom map-exchange multiplier). | Vanilla spawn distance. |
 | **Easy** | Same as Normal. | Never forced — whatever the map/exchange string sets is used as-is. | Pushed much further from the starting area. |
+
+---
+
+*Join my [Discord](https://discord.gg/pq6bWs8KTY)*

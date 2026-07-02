@@ -23,3 +23,11 @@ Date: 2026-07-02
       ores that need to be mined out gradually. They keep their own default
       frequency/probability/richness autoplace expression, scaled up by a new startup setting
       "100k-point-resource-multiplier" (default 5).
+    - Added startup setting "100k-technology-difficulty" (Easy/Normal/Hard, default Hard) controlling
+      how aggressively technology costs are scaled:
+        - Hard: no proto changes; control stage always forces the technology cost multiplier to 100k.
+        - Normal: "logistics" and "electric-mining-drill" (if present) ignore the cost multiplier at
+          the proto stage; control stage forces the multiplier to 100k only if it isn't already set
+          above 1, so a custom multiplier (e.g. x2000 from a map exchange string) is respected.
+        - Easy: same proto-stage exceptions as Normal; control stage never touches the multiplier;
+          enemy-base spawners and worms are additionally pushed much further from the starting area.

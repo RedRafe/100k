@@ -8,6 +8,6 @@
   "dependencies": [
     "base >= 2.1"
   ],
-  "description": "Nauvis resources are arranged into large Voronoi ore territories, each fully covered by its assigned resource.",
+  "description": "Play Factorio at 100k! Massive ore territories and a 100k tech cost multiplier, with configurable settings to tune the challenge to your liking.",
   "factorio_version": "2.1"
 }
