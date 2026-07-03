@@ -1,1 +1,1 @@
-require('prototypes.terrain-generation')
+require 'prototypes.point-resources'

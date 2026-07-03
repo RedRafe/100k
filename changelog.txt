@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-07-03
+  Features:
+    - Ore territories are no longer split evenly across #resources: each ore now has a weight
+      (default 100), and its voronoi fragments are sized proportionally to weight/total_weight, so
+      a heavier-than-default ore appears in more, and larger, territories than a default-weight
+      one, while a lighter one appears in fewer/smaller ones. Whitelisted starting weights: iron
+      ore 150, tungsten ore 150, calcite 50, uranium ore 20; copper ore, coal, stone, Vulcanus coal
+      and Gleba stone remain at the default of 100.
+    - Added a global "_100k" API (prototypes/ore-weights.lua) for registering these weights:
+      _100k.set_ore_weight(control_name, weight) / _100k.get_ore_weight(control_name). It's
+      declared in data.lua and stays open through data-updates.lua so weights can still be
+      registered or overridden before data-final-fixes.lua reads the final dictionary and builds
+      the weighted voronoi territories. Point-resources are unaffected by this change.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2026-07-02
   Features:

@@ -1,1 +1,1 @@
-require('prototypes.technology-tweaks')
+require 'prototypes.ore-territories'
